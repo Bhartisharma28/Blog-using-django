@@ -1,0 +1,79 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>HOME</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+  <style>
+   /* Make the image fully responsive */
+   .carousel-inner img {
+       width: 100%;
+       height: 20%;
+   }
+.two{
+  text-align: center;
+}
+
+form {
+  display: inline-block;
+   text-align: left;
+   width: 50%;
+}
+   h1,h2,h3,h4,h5,h6{
+     font-family:cursive;
+   }
+.box{
+width:300px //you can set it in %.
+padding:40px;
+background:#f9f9f9;
+border:3px solid #333;
+}
+   .one{
+     color:orange;
+   }
+
+   </style>
+  </head>
+  <body>
+  <div class="container">
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <a class="navbar-brand" href="{% url 'home' %}">
+      <img src="{% static 'Blog/images/pic.png' %}" alt="noimg" style="height:50px; width:90px;"></a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+         <span class="navbar-toggler-icon"></span>
+       </button>
+
+       <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav mx-auto">
+      <li class="nav-item active">
+        <a class="nav-link" href="{% url 'home' %}"> About Me </a>
+      </li>
+      <li class="nav-item active">
+        <a class="nav-link" href="{% url 'blogs' %}">Blogs </a>
+      </li>
+      <li class="nav-item active">
+        <a class="nav-link" href="{% url 'contact' %}">Contact </a>
+      </li>
+      </ul>
+      <ul class="navbar-nav mx-auto">
+      <li class="nav-item active">
+        &nbsp&nbsp<a href="mailto:bhartisharma.bs796@gmail.com?"><i class="fas fa-mail-bulk fa-3x"></i></a>
+      </li>
+      <li class="nav-item active">
+        &nbsp&nbsp<a href="https://www.instagram.com/its_nikky_sharma/"><i class="fab fa-instagram fa-3x"></i></a>
+        </li>
+        <li class="nav-item active">
+        &nbsp&nbsp<a href="https://www.facebook.com/profile.php?id=100009037122133"><i class="fab fa-facebook fa-3x"></i></a>
+      </li>
+      </ul>
+    </nav><br>
+</div>
+  </body>
+  {% block content %}
+  {% endblock %}
+</html>
